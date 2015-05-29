@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Teknik Sozluk</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string-array name="bolumarr">
+        <item>Tümü</item>
+        <item>Bilgisayar</item>
+        <item>Ziraat</item>
+        <item>İnşaat</item>
+    </string-array>
+</resources>
