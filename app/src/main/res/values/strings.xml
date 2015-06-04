@@ -3,6 +3,7 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="edsearch_hint">Kelimeyi giriniz</string>
     <string-array name="bolumarr">
         <item>Tümü</item>
         <item>Bilgisayar</item>

@@ -1,0 +1,42 @@
+<sql>
+<statement>
+    CREATE TABLE IF NOT EXISTS SOZLUK (
+    ID INTEGER PRIMARY KEY AUTOINCREMENT,
+    TURU  VARCHAR(50),
+    KELIME VARCHAR(500),
+    ACIKLAMA TEXT)
+</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Administrator','Yönetici')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','ADSL (Asymmetric Digital Subscriber Line)','Asimetrik Sayısal Abone Hattı. Varolan telefon hatları üzerinden yüksek bant genişliğinde sayısal verilerin iletilmesini sağlayan teknoloji. Çevirmeli telefon servislerinden farklı olarak sürekli bir bağlantı sağlar. ADSL, aynı hat üzerinden analog (ses) bilgilerin iletilmesine de izin verir.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Advanced','İleri')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Advantage','Üstünlük')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Agent','Ajan. Internet’te bilgi toplayan bir program. Sizin olmadığınız zamanlarda da bazı servisleri Periyodik olarak yerine getirebilir. Verdiğiniz parametrelere göre ilgilendiğiniz bilgileri toplar, bunları günlük veya belirlediğiniz periyotlarda size sunar.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','AGP (Accelerated Graphics Port)','Üç boyutlu grafiklerin sıradan PC’lerde gösterilmesini sağlayan bir arabirim spesifikasyonu. Intel tarafindan geliştirildi.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Algorithm','Bir sorunu çözmek için belirlenmiş kurallar veya işlemler.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Alias','Takma ad,eşdeğer ad')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Allocate','Atamak')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Alt Gr key','Alt Gr tusu')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Alt key','Alt tusu')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Alternative','Eş seçenek')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','AM (12 saatlik zaman biçimi)','ÖÖ (Ögleden Önce)')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','WAP (Wireless Application Protocol)','Kablosuz uygulama protokolu. Internet erişiminde kullanılan cep telefonu ve telsiz alıcısı gibi kablosuz cihazların kullanımını standartlaştırmak için bir dizi iletişim protokolunu içeren spesifikasyon.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Wap','Wireless Application Protocol. Kablosuz iletişim kuralları. İnternet üzerinde yer alan her türlü bilginin cep telefonu üzerinden ulaşılabilir hale gelmesidir. İnternette varolan her türlü bilgi cep telefonu yada wap uyumlu cihazlara WML adı verilen dil aracılığıyla ulaştırılabiliyor.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Web Page','(Web sayfası) Bir web servisinin tek seferde ekrana getirdiği bir html sayfası.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','White paper','Beyaz sayfa. Bir kurumun durumunu, felsefesini, ürünlerinde kullandığı teknolojileri açıklayan makale türü yazılar.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Wide Area Network (WAN)','Geniş alan ağı. Coğrafi olarak büyük bir alana yayılmış olan iletişim ağı.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Wildcard character','Bir veya birkaç karakterin yerine kullanılan özel bir karakter. Bu tür bir karakter olarak daha çok (*) işareti kullanılmaktadır.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','WinSock (Windows Socket Interface)','Pek çok uygulamanın Internet bağlantısını kullanmasına ve paylaşmasına izin veren bir yazılım arayüzü.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Wire speed','Kablo hızı.Bir iletişim teknolojisinin fiziksel bir kabloda sağladığı veri transfer hızı.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Wireless','Kablosuz. Bir işareti kablo yerine atmosfer ortamını kullanarak taşıyan elektromanyetik dalgalarla yapılan iletişim.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Wiring closet','Kablolama odası. Bir veri veya ses ağının kablolaması için kullanılan özel tasarımlı oda.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Workflow','İş akışı. Bir iş prosesinin her bir adımındaki görevler, prosedürel adımlar, gerekli bilgi giriş çıkışı ve araçlardan oluşur. Bir iş prosesinin analizinde ve yönetilmesindeki iş akış yaklaşımı, dokümanlara, veriye ve veritabanına odaklanan nesne yönelimli bir yaklaşımla birleştirilir. Genel olarak iş akışı yönetimi, dokümanlardan çok proseslere odaklanır.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Workgroup','Çalışma grubu. Birbirleri ile veri alışverişi ve iletişim için tasarlanmış olan yerel bir ağdaki iş istasyonları ve sunucular topluluğu.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Workgroup switching','Çalışma grubu anahtarlaması. Ethernet ve CDDI veya FDDI arasında yüksek hızlı çevirici köprüleme ile Ethernet ağları arasında yüksek hızlı (100 Mbps) şeffaf köprüleme sağlayan anahtarlama yöntemi.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Workstation','İş istasyonu. 1) Kişisel bilgisayardan daha hızlı ve daha kapasiteli olan ve tek kullanım hedeflenerek tasarlanmış olan bilgisayar. 2) Bazen ana bilgisayara bağlı bilgisayarlar için de kullanılır.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','World Wide Web (WWW)','Bir browser gibi istemci uygulamaları kullanılarak bağlanılan ve çeşitli servisler sunan, Internet sunucularının oluşturduğu büyük ağ.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','WORM (Write once read many)','Daha sonra kopyaları alınmak üzere, bir kere yazım yapılabilen CD-ROM diski.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','WYSIWYG (what you see is what you get)','Ne görürsen onu alırsın. Yazılım geliştiricinin bir arabirim veya doküman oluştururken sonucunu bire bir görmesini sağlayan editor programı.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','X2','US Robotics firmasının geliştirdiği, 56K hızlarında internet bağlantısı sağlamayı amaçlayan modem standardı.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','XML (Extensible Markup Language)','Internet üzerinde bilgiyi paylaşabilmek için ortak bir bilgi formatı yaratma yolu. HTML diline benzer.')</statement>
+<statement>INSERT INTO SOZLUK(TURU,KELIME,ACIKLAMA) VALUES('BILISIM','Zip','PKZip, Winzip gibi arşivleme programları kullanılarak Sıkıştırılmış programlar.')</statement>
+</sql>
