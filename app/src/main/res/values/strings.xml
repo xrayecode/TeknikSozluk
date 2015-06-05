@@ -11,4 +11,5 @@
         <item>Ziraat</item>
         <item>İnşaat</item>
     </string-array>
+    <string name="title_activity_detail_">Aciklama</string>
 </resources>
