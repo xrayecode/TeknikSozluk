@@ -5,18 +5,29 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:paddingBottom="@dimen/activity_vertical_margin"
-    tools:context="com.codexraye.tekniksozluk.Detail_Activity">
+    tools:context="com.codexraye.tekniksozluk.Detail_Activity"
+    android:background="#ff89b7ff">
 
     <TextView
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:text="New Text"
-        android:id="@+id/tvKelime" />
+        android:id="@+id/tvKelime"
+        android:gravity="center_vertical"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        android:background="#ffffffff"
+        android:padding="3dp" />
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:text="New Text"
-        android:id="@+id/tvAciklama" />
+        android:id="@+id/tvAciklama"
+        android:background="#ffffffff"
+        android:layout_marginTop="4dp"
+        android:textSize="16dp"
+        android:padding="3dp" />
+
 </LinearLayout>
 

@@ -1,6 +1,7 @@
 package com.codexraye.tekniksozluk;
 
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -24,6 +25,9 @@ public class Detail_Activity extends ActionBarActivity {
 
         xkelime.setText(intent.getStringExtra("DET_KELIME"));
         xaciklama.setText(intent.getStringExtra("DET_ACIKLAMA"));
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/DoppioOne.ttf");
+        xkelime.setTypeface(typeface);
+
     }
 
 

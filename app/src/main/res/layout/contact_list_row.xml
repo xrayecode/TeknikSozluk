@@ -23,15 +23,16 @@
 
             <TextView
                 android:layout_width="300dp"
-                android:layout_height="20dp"
+                android:layout_height="25dp"
                 android:text="New Text"
                 android:gravity="center_vertical"
                 android:id="@+id/edKelime"
-                android:textSize="13dp" />
+                android:textSize="16dp"
+                android:textStyle="bold" />
 
             <TextView
                 android:layout_width="300dp"
-                android:layout_height="20dp"
+                android:layout_height="15dp"
                 android:text="New Text"
                 android:gravity="center_vertical"
                 android:id="@+id/edTuru"
