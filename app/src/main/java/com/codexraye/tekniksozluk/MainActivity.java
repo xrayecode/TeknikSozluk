@@ -4,11 +4,11 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
-
+import android.widget.TextView;
 import com.codexraye.tekniksozluk.lib.ContactListAdapter;
 import com.codexraye.tekniksozluk.lib.DatabaseHelper;
 
@@ -19,37 +19,30 @@ public class MainActivity extends ActionBarActivity {
     ListView lvSearchList;
     Button ara;
     SQLiteDatabase db;
+    TextView edSearch;
+    public static String xYazilanKelime ="";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         lvSearchList = (ListView) findViewById(R.id.lSearch);
-
-        db = (new DatabaseHelper(this)).getWritableDatabase();
-        if (db==null){
-            Toast.makeText(this, "Bağlanamadı", 2000).show();
-        }
-        ara= (Button) findViewById(R.id.bAra);
-        ara.setOnClickListener(new View.OnClickListener() {
+        if(db==null) db = (new DatabaseHelper(this)).getWritableDatabase();
+        edSearch = (TextView) findViewById(R.id.edSearch);
+        edSearch.addTextChangedListener(new TextWatcher() {
             @Override
-            public void onClick(View v) {
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) { }
+            @Override
+            public void afterTextChanged(Editable s) {
+                xYazilanKelime=edSearch.getText().toString();
                 showlist(readAll(db));
             }
         });
-    }
-    public Cursor readAll(SQLiteDatabase db) {
-        try {
-            Cursor cursor = db.query("SOZLUK",
-                    new String[] {"ID", "KELIME", "TURU","ACIKLAMA"}
-                    , null, null, null, null, null);
-            if (cursor.moveToNext()) {
-                return cursor;
-            }
-            return null;
-        } finally {
-        }
 
     }
+
     private void showlist(Cursor c1) {
 
         ArrayList<Sozluk> contactList = new ArrayList<Sozluk>();
@@ -69,14 +62,26 @@ public class MainActivity extends ActionBarActivity {
 
                 } while (c1.moveToNext());
             }
+            ContactListAdapter contactListAdapter;
+            contactListAdapter = new ContactListAdapter(MainActivity.this, contactList);
+            lvSearchList.setAdapter(contactListAdapter);
         }
         c1.close();
 
-        ContactListAdapter contactListAdapter;
-        contactListAdapter = new ContactListAdapter(MainActivity.this, contactList);
-        lvSearchList.setAdapter(contactListAdapter);
 
     }
 
+    public Cursor readAll(SQLiteDatabase db) {
+        try {
+            Cursor cursor = db.query("SOZLUK",
+                    new String[] {"ID", "KELIME", "TURU","ACIKLAMA"}
+                    , " KELIME like '%"+edSearch.getText().toString()+"%'", null, null, null, null);
+            if (cursor.moveToNext()) {
+                return cursor;
+            }
+            return null;
+        } finally {
+        }
+    }
 
 }
