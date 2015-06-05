@@ -1,4 +1,4 @@
-package com.codexraye.tekniksozluk;
+package com.codexraye.tekniksozluk.lib;
 
 import java.io.InputStream;
 
@@ -11,6 +11,8 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
+
+import com.codexraye.tekniksozluk.R;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 

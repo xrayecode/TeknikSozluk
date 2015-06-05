@@ -4,12 +4,13 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.codexraye.tekniksozluk.lib.ContactListAdapter;
+import com.codexraye.tekniksozluk.lib.DatabaseHelper;
 
 import java.util.ArrayList;
 
@@ -17,11 +18,14 @@ import java.util.ArrayList;
 public class MainActivity extends ActionBarActivity {
     ListView lvSearchList;
     Button ara;
+    SQLiteDatabase db;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final SQLiteDatabase db = (new DatabaseHelper(this)).getWritableDatabase();
+        lvSearchList = (ListView) findViewById(R.id.lSearch);
+
+        db = (new DatabaseHelper(this)).getWritableDatabase();
         if (db==null){
             Toast.makeText(this, "Bağlanamadı", 2000).show();
         }
