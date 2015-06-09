@@ -72,6 +72,7 @@ public class MainActivity extends ActionBarActivity {
         if (c1!=null){
             c1.close();
         }
+
         ContactListAdapter contactListAdapter;
         contactListAdapter = new ContactListAdapter(MainActivity.this, contactList);
         lvSearchList.setAdapter(contactListAdapter);
