@@ -1,18 +1,10 @@
 package com.codexraye.tekniksozluk.lib;
 
-import java.io.InputStream;
 
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-
-import org.w3c.dom.Document;
-import org.w3c.dom.NodeList;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
-
-import com.codexraye.tekniksozluk.R;
+import com.codexraye.tekniksozluk.MainActivity;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
@@ -21,26 +13,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     protected Context context;
 
     public DatabaseHelper(Context context) {
-        super(context, DATABASE_NAME, null,5);
+        super(context, DATABASE_NAME, null,20);
         this.context = context;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String s;
-        try {
-            Toast.makeText(context, "1", 2000).show();
-            InputStream in = context.getResources().openRawResource(R.raw.sql);
-            DocumentBuilder builder = DocumentBuilderFactory.newInstance().newDocumentBuilder();
-            Document doc = builder.parse(in, null);
-            NodeList statements = doc.getElementsByTagName("statement");
-            for (int i=0; i<statements.getLength(); i++) {
-                s = statements.item(i).getChildNodes().item(0).getNodeValue();
-                db.execSQL(s);
-            }
-        } catch (Throwable t) {
-            Toast.makeText(context, t.toString(), 50000).show();
-        }
+        String s =
+        "CREATE TABLE IF NOT EXISTS SOZLUK ( "+
+                "ID INTEGER PRIMARY KEY AUTOINCREMENT, "+
+        "TURU  VARCHAR(50), "+
+         "       KELIME VARCHAR(500), "+
+          "      ACIKLAMA TEXT) ";
+        db.execSQL(s);
+        MainActivity.dbAc=true;
     }
 
     @Override
